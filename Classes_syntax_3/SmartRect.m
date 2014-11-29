@@ -50,8 +50,8 @@
     return result;
 }
 
--(float)circleInscribedInRect{
-//    CGPoint origin = self.origin;
+-(NSString*)circleInscribedInRect{
+    CGPoint center = self.origin;
     int radius;
     if (self.widht<=self.heigth){
         radius = self.widht/2;
@@ -59,8 +59,10 @@
     else{
         radius = self.heigth/2;
     }
-    return radius;
-}
+    NSString* result = [NSString stringWithFormat:@"x:%g y:%g radius:%d", center.x, center.y, radius];
+        
+    return result;
+    }
 
 -(SmartRect*)intersectionWithRect:(SmartRect*)otherRect{
     

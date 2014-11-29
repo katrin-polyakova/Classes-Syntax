@@ -12,20 +12,24 @@
 	<dict>
 		<key>225CE86DC0ED62C593F8C79C127683845A07E96A</key>
 		<string>https://github.com/katrin-polyakova/Exercises.git</string>
+		<key>B5E32F4A7DE562502EDEE2C61266FB01D2A2C72C</key>
+		<string>https://github.com/katrin-polyakova/Classes-Syntax.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Classes_syntax_3/Classes_syntax_3.xcodeproj</string>
+	<string>Classes_syntax_3.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>225CE86DC0ED62C593F8C79C127683845A07E96A</key>
 		<string>../../..</string>
+		<key>B5E32F4A7DE562502EDEE2C61266FB01D2A2C72C</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/katrin-polyakova/Exercises.git</string>
+	<string>https://github.com/katrin-polyakova/Classes-Syntax.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>225CE86DC0ED62C593F8C79C127683845A07E96A</string>
+	<string>B5E32F4A7DE562502EDEE2C61266FB01D2A2C72C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>225CE86DC0ED62C593F8C79C127683845A07E96A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Syntax_research</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B5E32F4A7DE562502EDEE2C61266FB01D2A2C72C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Classes_syntax_3</string>
 		</dict>
 	</array>
 </dict>

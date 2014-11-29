@@ -58,7 +58,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n\tRectangle: %@ is %@ Circle: %@", [rectangle2 description], rect2InCircle?@"in":@"out of", [circle description] );
         
         NSLog(@"\n--------Circle inscribed in Rect--------");
-        [rect circleInscribedInRect];
+        NSLog(@"\n\tCircle: %@ inscribed in Rectangle: %@",[rect circleInscribedInRect], [rect description]);
     }
     return 0;
 }
