@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "SmartCircle.h"
+#import "SmartRect.h"
 #import <math.h>
 
 @implementation SmartCircle

@@ -34,8 +34,6 @@ int main(int argc, const char * argv[]) {
         BOOL otherRect1InRect = [rect isOtherRectInsideRect:(SmartRect*) otherRect1];
         NSLog(@"\n\tRectangle: %@ is %@ Rectangle: %@", [otherRect1 description], otherRect1InRect?@"in":@"out of", [rect description] );
         
-        //      SmartRect *rect1 = [[SmartRect alloc] initWithOrigin:CGPointMake(0,0) andWidth:300 andHeight:200];
-        //      NSLog(@"%@\n", [rect1 description]);
         
         NSLog(@"\n--------SmartCircle--------");
         SmartCircle *circle = [[SmartCircle alloc] initWithCenter:CGPointMake(80,60) andRadius:35];
@@ -58,7 +56,12 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n\tRectangle: %@ is %@ Circle: %@", [rectangle2 description], rect2InCircle?@"in":@"out of", [circle description] );
         
         NSLog(@"\n--------Circle inscribed in Rect--------");
-        NSLog(@"\n\tCircle: %@ inscribed in Rectangle: %@",[rect circleInscribedInRect], [rect description]);
+        SmartCircle* inscrCircle = [rect circleInscribedInRect];
+        NSLog(@"\n\tCircle: %@ inscribed in Rectangle: %@",[inscrCircle description], [rect description]);
+        
+//        SmartRect *rect1 = [[SmartRect alloc] initWithOrigin:CGPointMake(0,0) andWidth:300 andHeight:200];
+//        NSLog(@"%@\n", [rect1 description]);
+        
     }
     return 0;
 }

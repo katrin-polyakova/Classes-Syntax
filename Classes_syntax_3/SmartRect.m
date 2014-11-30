@@ -39,7 +39,7 @@
 }
 
 -(BOOL)isOtherRectInsideRect:(SmartRect*)otherRect{
-    int result = NO;
+    BOOL result = NO;
     int pointCounter = [self isPointInRect:otherRect.origin];
     pointCounter = pointCounter + [self isPointInRect:CGPointMake(otherRect.origin.x+otherRect.widht,otherRect.origin.y)];
     pointCounter = pointCounter + [self isPointInRect:CGPointMake(otherRect.origin.x,otherRect.origin.y+otherRect.heigth)];
@@ -50,19 +50,17 @@
     return result;
 }
 
--(NSString*)circleInscribedInRect{
-    CGPoint center = self.origin;
-    int radius;
+-(SmartCircle*)circleInscribedInRect{
+    float radius;
     if (self.widht<=self.heigth){
         radius = self.widht/2;
-    }
-    else{
+    }else{
         radius = self.heigth/2;
     }
-    NSString* result = [NSString stringWithFormat:@"x:%g y:%g radius:%d", center.x, center.y, radius];
-        
-    return result;
-    }
+    SmartCircle* inscribedCircle = [[SmartCircle alloc] initWithCenter:CGPointMake(self.origin.x, self.origin.y) andRadius:radius];
+    
+    return inscribedCircle;
+}
 
 -(SmartRect*)intersectionWithRect:(SmartRect*)otherRect{
     
