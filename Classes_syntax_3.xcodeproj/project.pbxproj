@@ -65,8 +65,8 @@
 			children = (
 				44714AA71A21E5C5004EF20A /* main.m */,
 				44714AAE1A21EDDD004EF20A /* SmartRect.h */,
-				44714AAF1A21EE20004EF20A /* SmartRect.m */,
 				44D311531A26638B009EB68F /* SmartCircle.h */,
+				44714AAF1A21EE20004EF20A /* SmartRect.m */,
 				44D311511A26636E009EB68F /* SmartCircle.m */,
 			);
 			path = Classes_syntax_3;

@@ -20,7 +20,7 @@
 }
 
 -(BOOL)isPointInCircle:(CGPoint)point{
-    int result = NO;
+    BOOL result = NO;
     float distanceBetweenPoints = sqrtf(powf((point.x-self.center.x),2)+powf((point.y-self.center.y),2));
     if (distanceBetweenPoints <= self.radius)
     {
@@ -30,11 +30,16 @@
 }
 
 -(BOOL)isRectInsideCircle:(SmartRect*)rectangle{
-    int result = NO;
+    BOOL result = NO;
+    
+    CGPoint topRight = CGPointMake(rectangle.origin.x+rectangle.widht,rectangle.origin.y);
+    CGPoint bottomLeft = CGPointMake(rectangle.origin.x,rectangle.origin.y+rectangle.heigth);
+    CGPoint bottomRigt = CGPointMake(rectangle.origin.x+rectangle.widht,rectangle.origin.y+rectangle.heigth);
+    
     int pointCounter = [self isPointInCircle:rectangle.origin];
-    pointCounter = pointCounter + [self isPointInCircle:CGPointMake(rectangle.origin.x+rectangle.widht,rectangle.origin.y)];
-    pointCounter = pointCounter + [self isPointInCircle:CGPointMake(rectangle.origin.x,rectangle.origin.y+rectangle.heigth)];
-    pointCounter = pointCounter + [self isPointInCircle:CGPointMake(rectangle.origin.x+rectangle.widht,rectangle.origin.y+rectangle.heigth)];
+    pointCounter = pointCounter + [self isPointInCircle:topRight];
+    pointCounter = pointCounter + [self isPointInCircle:bottomLeft];
+    pointCounter = pointCounter + [self isPointInCircle:bottomRigt];
     
     if(pointCounter == 4){
         result = YES;

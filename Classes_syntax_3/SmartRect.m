@@ -40,10 +40,15 @@
 
 -(BOOL)isOtherRectInsideRect:(SmartRect*)otherRect{
     BOOL result = NO;
+    
+    CGPoint topRight = CGPointMake(otherRect.origin.x+otherRect.widht,otherRect.origin.y);
+    CGPoint bottomLeft = CGPointMake(otherRect.origin.x,otherRect.origin.y+otherRect.heigth);
+    CGPoint bottomRight = CGPointMake(otherRect.origin.x+otherRect.widht,otherRect.origin.y+otherRect.heigth);
+    
     int pointCounter = [self isPointInRect:otherRect.origin];
-    pointCounter = pointCounter + [self isPointInRect:CGPointMake(otherRect.origin.x+otherRect.widht,otherRect.origin.y)];
-    pointCounter = pointCounter + [self isPointInRect:CGPointMake(otherRect.origin.x,otherRect.origin.y+otherRect.heigth)];
-    pointCounter = pointCounter + [self isPointInRect:CGPointMake(otherRect.origin.x+otherRect.widht,otherRect.origin.y+otherRect.heigth)];
+    pointCounter = pointCounter + [self isPointInRect:topRight];
+    pointCounter = pointCounter + [self isPointInRect:bottomLeft];
+    pointCounter = pointCounter + [self isPointInRect:bottomRight];
     if(pointCounter == 4){
         result = YES;
     }

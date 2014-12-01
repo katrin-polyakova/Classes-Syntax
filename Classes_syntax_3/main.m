@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n\tPoint{%g,%g} is %@ Rectangle: %@ ", point1.x, point1.y, pointInRect1?@"in":@"out",[rect description]);
         CGPoint point2 = CGPointMake(30,140);
         BOOL pointInRect2 = [rect isPointInRect:(CGPoint) point2];
-        NSLog(@"\n\tPoint{%g,%g} is %@ Rectangle: %@ ", point2.x, point2.y, pointInRect2?@"in":@"out",[rect description]);
+        NSLog(@"\n\tPoint{%g,%g} is %@ Rectangle: %@ ", point2.x, point2.y, pointInRect2?@"in":@"out", rect);
         
         NSLog(@"\n--------First Rectangle is in Second Rectangle--------");
         SmartRect *otherRect = [[SmartRect alloc] initWithOrigin:CGPointMake(50,60) andWidth:40 andHeight:35];
@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n\tRectangle: %@ is %@ Rectangle: %@", [otherRect description], otherRectInRect?@"in":@"out of", [rect description] );
         SmartRect *otherRect1 = [[SmartRect alloc] initWithOrigin:CGPointMake(50,60) andWidth:100 andHeight:50];
         BOOL otherRect1InRect = [rect isOtherRectInsideRect:(SmartRect*) otherRect1];
-        NSLog(@"\n\tRectangle: %@ is %@ Rectangle: %@", [otherRect1 description], otherRect1InRect?@"in":@"out of", [rect description] );
+        NSLog(@"\n\tRectangle: %@ is %@ Rectangle: %@", otherRect1, otherRect1InRect?@"in":@"out of", rect);
         
         
         NSLog(@"\n--------SmartCircle--------");
@@ -45,7 +45,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n\tPoint{%g,%g} is %@ Circle: %@", point3.x, point3.y, pointInCircle1?@"in":@"out of", [circle description]);
         CGPoint point4 = CGPointMake(50, 30);
         BOOL pointInCircle2 = [circle isPointInCircle:CGPointMake(50,30)];
-        NSLog(@"\n\tPoint{%g,%g} is %@ Circle: %@", point4.x, point4.y, pointInCircle2?@"in":@"out of", [circle description]);
+        NSLog(@"\n\tPoint{%g,%g} is %@ Circle: %@", point4.x, point4.y, pointInCircle2?@"in":@"out of", circle);
         
         NSLog(@"\n--------Rectangle is in Circle--------");
         SmartRect *rectangle1 = [[SmartRect alloc] initWithOrigin:CGPointMake(60,50) andWidth:30 andHeight:36];
@@ -53,11 +53,11 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n\tRectangle: %@ is %@ Circle: %@", [rectangle1 description], rect1InCircle?@"in":@"out of", [circle description] );
         SmartRect *rectangle2 = [[SmartRect alloc] initWithOrigin:CGPointMake(50,60) andWidth:40 andHeight:35];
         BOOL rect2InCircle = [circle isRectInsideCircle:(SmartRect*) rectangle2];
-        NSLog(@"\n\tRectangle: %@ is %@ Circle: %@", [rectangle2 description], rect2InCircle?@"in":@"out of", [circle description] );
+        NSLog(@"\n\tRectangle: %@ is %@ Circle: %@", rectangle2, rect2InCircle?@"in":@"out of", circle);
         
         NSLog(@"\n--------Circle inscribed in Rect--------");
         SmartCircle* inscrCircle = [rect circleInscribedInRect];
-        NSLog(@"\n\tCircle: %@ inscribed in Rectangle: %@",[inscrCircle description], [rect description]);
+        NSLog(@"\n\tCircle: %@ inscribed in Rectangle: %@", inscrCircle, rect);
         
 //        SmartRect *rect1 = [[SmartRect alloc] initWithOrigin:CGPointMake(0,0) andWidth:300 andHeight:200];
 //        NSLog(@"%@\n", [rect1 description]);
