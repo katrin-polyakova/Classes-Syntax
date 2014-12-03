@@ -14,7 +14,7 @@
 -(float)diagonal;
 -(BOOL)isPointInRect:(CGPoint)point;
 -(BOOL)isOtherRectInsideRect:(SmartRect*)otherRect;
--(SmartCircle*) circleInscribedInRect;
+-(SmartCircle*)circleInscribedInRect;
 -(SmartRect*)intersectionWithRect:(SmartRect*)otherRect;
 
 @end

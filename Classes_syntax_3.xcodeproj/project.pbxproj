@@ -10,6 +10,7 @@
 		44714AA81A21E5C5004EF20A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44714AA71A21E5C5004EF20A /* main.m */; };
 		44714AB01A21EE20004EF20A /* SmartRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 44714AAF1A21EE20004EF20A /* SmartRect.m */; };
 		44D311521A26636E009EB68F /* SmartCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D311511A26636E009EB68F /* SmartCircle.m */; };
+		44D4DDD41A2F295D00859560 /* SmartTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D4DDD31A2F295D00859560 /* SmartTriangle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		44714AAF1A21EE20004EF20A /* SmartRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartRect.m; sourceTree = "<group>"; };
 		44D311511A26636E009EB68F /* SmartCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartCircle.m; sourceTree = "<group>"; };
 		44D311531A26638B009EB68F /* SmartCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartCircle.h; sourceTree = "<group>"; };
+		44D4DDD21A2F295D00859560 /* SmartTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartTriangle.h; sourceTree = "<group>"; };
+		44D4DDD31A2F295D00859560 /* SmartTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartTriangle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +69,10 @@
 				44714AA71A21E5C5004EF20A /* main.m */,
 				44714AAE1A21EDDD004EF20A /* SmartRect.h */,
 				44D311531A26638B009EB68F /* SmartCircle.h */,
+				44D4DDD21A2F295D00859560 /* SmartTriangle.h */,
 				44714AAF1A21EE20004EF20A /* SmartRect.m */,
 				44D311511A26636E009EB68F /* SmartCircle.m */,
+				44D4DDD31A2F295D00859560 /* SmartTriangle.m */,
 			);
 			path = Classes_syntax_3;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				44714AA81A21E5C5004EF20A /* main.m in Sources */,
 				44714AB01A21EE20004EF20A /* SmartRect.m in Sources */,
 				44D311521A26636E009EB68F /* SmartCircle.m in Sources */,
+				44D4DDD41A2F295D00859560 /* SmartTriangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
